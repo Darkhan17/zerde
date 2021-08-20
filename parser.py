@@ -29,7 +29,6 @@ class Parser():
         return new_url
 
     def makeRequest(self,url):
-        headers = {"Authorization": "Bearer 1220d31d70aa17128660bff926b1bbfa", "Content-Type": "application/json"}
         response = requests.get(url, headers=headers, verify=False)
         return response
 
