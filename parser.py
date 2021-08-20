@@ -35,6 +35,7 @@ class Parser():
 
 
     def parse(self):
+        self.write_to_file_headers()
         while(True):
             data = []
             url = self.makeUrl()
@@ -54,21 +55,25 @@ class Parser():
                 item['customer'] = self.findCustomer(i['customer_bin'])
                 item['supplier'] = self.findSupplier(i['supplier_biin'])
                 item['contract_number_sys'] = i['contract_number_sys']
+                item['link'] = self.getLink(item['id'])
                 contract_id = i['id']
                 data.append(item)
-                self.write_to_file(data)
-                self.parsePredmet(contract_id)
+                self.parsePredmet(contract_id, item)
             if self.next_page_url == (None or ""):
                 break
 
 
-    def write_to_file(self,data):
+    def write_to_file_headers(self):
         with open("data.csv", "a", newline="") as file:
-            writer = csv.DictWriter(file, ("id", "contract_number","contract_number_sys",'ref_contract_type',"ref_contract_status","crdate","contract_sum_wnds","supplier","customer"))
+            writer = csv.DictWriter(file, ("id", "contract_number","contract_number_sys",'ref_contract_type',"ref_contract_status","crdate","contract_sum_wnds","supplier","customer","item_id", "name","quantity", "item_price", "total_sum","link"))
             writer.writeheader()
-            writer.writerows(data)
         file.close()
 
+    def write_to_file(self,data):
+        with open("data.csv", "a", newline="") as file:
+            writer = csv.DictWriter(file, ("id", "contract_number","contract_number_sys",'ref_contract_type',"ref_contract_status","crdate","contract_sum_wnds","supplier","customer","item_id", "name","quantity", "item_price", "total_sum","link"))
+            writer.writerows(data)
+        file.close()
 
     def sendRequest(self,url):
         res = self.makeRequest(url).json()
@@ -160,14 +165,13 @@ class Parser():
         return self.sendRequest(url)
 
 
-    def parsePredmet(self,id_contract):
+    def parsePredmet(self,id_contract,item):
         data = []
         while (True):
             url = "https://ows.goszakup.gov.kz/v3/contract/" + str(id_contract) + "/units"
             response = self.makeRequest(url).json()
             next_page_url = response["next_page"]
             for i in response['items']:
-                item = {}
                 item['item_id'] = i['id']
                 item['quantity'] = i['quantity']
                 item['item_price'] = i['item_price_wnds']
@@ -178,12 +182,12 @@ class Parser():
                 print(next_page_url)
                 break
 
-        self.write_to_file2(data)
+        self.write_to_file(data)
 
     def write_to_file2(self,data):
         with open("data.csv", "a", newline="") as file:
             writer = csv.DictWriter(file, (
-            "item_id", "name","quantity", "item_price", "total_sum"))
+            ))
             writer.writeheader()
             writer.writerows(data)
         file.close()
@@ -200,7 +204,11 @@ class Parser():
         return plan['name_ru'] + ' / ' + plan['name_kz']
 
 
+    def getLink(self,id):
+        url = 'https://www.goszakup.gov.kz/ru/egzcontract/cpublic/contract/'
+        return url + str(id)
 
-parserAlmatyAkimat = Parser("000640002245")
 
-parserAlmatyAkimat.parse()
+bin = input("Enter the bin of company")
+parser = Parser(bin)
+parser.parse()

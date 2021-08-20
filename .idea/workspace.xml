@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2c7a6b6c-9517-44e6-a864-682b5d870d0b" name="Default Changelist" comment="" />
+    <list default="true" id="2c7a6b6c-9517-44e6-a864-682b5d870d0b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/parser.py" beforeDir="false" afterPath="$PROJECT_DIR$/parser.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -14,7 +19,11 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1wccVmTCTG1UVfRqF7OL6sl2THS" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -22,6 +31,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
   </component>
   <component name="RunManager">
     <configuration name="parser" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
@@ -73,22 +83,22 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="458" y="205" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1440.900@0.0.1440.900" timestamp="1629106385184" />
-    <state width="1419" height="303" key="GridCell.Tab.0.bottom" timestamp="1629170918728">
+    <state width="1419" height="245" key="GridCell.Tab.0.bottom" timestamp="1629436210134">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1419" height="303" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1629170918728" />
-    <state width="1419" height="303" key="GridCell.Tab.0.center" timestamp="1629170918727">
+    <state width="1419" height="245" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1629436210134" />
+    <state width="1419" height="245" key="GridCell.Tab.0.center" timestamp="1629436210132">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1419" height="303" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1629170918727" />
-    <state width="1419" height="303" key="GridCell.Tab.0.left" timestamp="1629170918726">
+    <state width="1419" height="245" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1629436210132" />
+    <state width="1419" height="245" key="GridCell.Tab.0.left" timestamp="1629436210131">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1419" height="303" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1629170918726" />
-    <state width="1419" height="303" key="GridCell.Tab.0.right" timestamp="1629170918728">
+    <state width="1419" height="245" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1629436210131" />
+    <state width="1419" height="245" key="GridCell.Tab.0.right" timestamp="1629436210133">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1419" height="303" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1629170918728" />
+    <state width="1419" height="245" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1629436210133" />
     <state width="1419" height="303" key="GridCell.Tab.1.bottom" timestamp="1629170918732">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
